@@ -11,7 +11,9 @@
 using System;
 
 namespace ConsoleAppClass1Zad2
-{
+{/// <summary>
+/// Класс подсчета периметра, площади
+/// </summary>
     public class Rectangle
     {
         public double side1, side2;
@@ -21,41 +23,38 @@ namespace ConsoleAppClass1Zad2
             this.side2 = side2;
         }
         /// <summary>
-        /// Метод рассчета площади
+        /// Метод подсчета площади
         /// </summary>
-        /// <param name="side1"></param>
-        /// <param name="side2"></param>
         /// <returns></returns>
         public double AreaCalculator()
         {
             double resultarea = side1 * side2;
             return resultarea;
         }
-        /// <summary>
-        /// Метод рассчета периметра
-        /// </summary>
-        /// <param name="side1"></param>
-        /// <param name="side2"></param>
-        /// <returns></returns>
+      /// <summary>
+      /// Метод подсчета периметра
+      /// </summary>
+      /// <returns></returns>
         public double PerimeterCalculator()
         {
             double resultperimetr = (side1 + side2) * 2;
             return resultperimetr;
         }
+        /// <summary>
+        /// Передача значения площади
+        /// </summary>
         public double Area
         {
-            get
-            {
-                return this.AreaCalculator();
-            }
-
+            get => this.AreaCalculator();
+            
         }
+        /// <summary>
+        /// Передача значения периметра
+        /// </summary>
         public double Perimetr
         {
-            get
-            {
-                return this.PerimeterCalculator();
-            }
+            get => this.PerimeterCalculator();
+          
         }
     }
     class Program

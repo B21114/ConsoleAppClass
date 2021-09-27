@@ -6,7 +6,7 @@ namespace ConsoleAppClass
     {
         class Adress
         {
-            public int Index { get; set; }
+            public int Index1 { get; set; }
             public string Country { get; set; }
             public string City { get; set; }
             public string Street { get; set; }
@@ -15,16 +15,19 @@ namespace ConsoleAppClass
         }
         static void Main(string[] args)
         {
-            Adress adress1 = new Adress();
+            Adress adress1 = new Adress()
+            {
+                Index1 = 123456,
+                Country = "Россия",
+                City = "Москва",
+                Street = "Луговая",
+                House = 123,
+                Apartment = 13,
+            };
 
-            adress1.Index = 123456;
-            adress1.Country = "Россия";
-            adress1.City = "Москва";
-            adress1.Street = "Луговая";
-            adress1.House = 123;
-            adress1.Apartment = 13;
 
-            Console.WriteLine($"{adress1.Index} {adress1.Country} {adress1.City} {adress1.Street} {adress1.House} {adress1.Apartment}");
+          
+            Console.WriteLine($"{adress1.Index1} {adress1.Country} {adress1.City} {adress1.Street} {adress1.House} {adress1.Apartment}");
 
         }
     }
