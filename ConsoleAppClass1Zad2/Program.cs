@@ -17,6 +17,11 @@ namespace ConsoleAppClass1Zad2
     public class Rectangle
     {
         public double side1, side2;
+        /// <summary>
+        /// Инициализатор прямоугольника
+        /// </summary>
+        /// <param name="side1"> Ширина</param>
+        /// <param name="side2"> Длина</param>
         public Rectangle(double side1, double side2)
         {
             this.side1 = side1;
@@ -31,10 +36,10 @@ namespace ConsoleAppClass1Zad2
             double resultarea = side1 * side2;
             return resultarea;
         }
-      /// <summary>
-      /// Метод подсчета периметра
-      /// </summary>
-      /// <returns></returns>
+        /// <summary>
+        /// Метод подсчета периметра
+        /// </summary>
+        /// <returns></returns>
         public double PerimeterCalculator()
         {
             double resultperimetr = (side1 + side2) * 2;
@@ -43,31 +48,23 @@ namespace ConsoleAppClass1Zad2
         /// <summary>
         /// Передача значения площади
         /// </summary>
-        public double Area
-        {
-            get => this.AreaCalculator();
-            
-        }
+        public double Area => this.AreaCalculator();
+
         /// <summary>
         /// Передача значения периметра
         /// </summary>
-        public double Perimetr
-        {
-            get => this.PerimeterCalculator();
-          
-        }
+        public double Perimetr => this.PerimeterCalculator();
+
     }
     class Program
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Введите стороны прямоугольника!");
             double side1 = Convert.ToDouble(Console.ReadLine());
             double side2 = Convert.ToDouble(Console.ReadLine());
             Rectangle rectangle = new Rectangle(side1, side2);
             Console.WriteLine($"Площадь: {0}, периметр: {1}", rectangle.Area, rectangle.Perimetr);
-
         }
     }
 }

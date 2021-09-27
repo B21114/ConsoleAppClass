@@ -9,52 +9,54 @@ using System;
 
 namespace ConsoleAppClass1Zad3
 {
-   public class Book
-    {
-      
-       public Book(string title, string author, string content)
-        { 
-        
-        }
-       public class Title
-        {
-           public string title { get; set; }
-            void Show()
-            {
-                Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
-                Console.WriteLine("...");
-                Console.ResetColor();
-            }
-        }
-        class Author
-        {
-            string author;
-            void Show()
-            {
-                Console.ForegroundColor = ConsoleColor.Red; // устанавливаем цвет
-                Console.WriteLine("...");
-                Console.ResetColor();
-            }
 
-        }
-        class Content
+
+    public class Book()
         {
-            string content;
-            void Show()
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow; // устанавливаем цвет
-                Console.WriteLine("...");
-                Console.ResetColor();
-            }
+          Book(string title, string author, string content)
+    { 
+    
+    }
         }
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Book book1 = new Book();
-               // Book1.
-            }
-        }
+public class Title
+{
+    public string title { get; set; }
+    void Show()
+    {
+        Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
+        Console.WriteLine("...");
+        Console.ResetColor();
+    }
+}
+class Author
+{
+    public string author { get; set; }
+    void Show()
+    {
+        Console.ForegroundColor = ConsoleColor.Red; // устанавливаем цвет
+        Console.WriteLine("...");
+        Console.ResetColor();
+    }
+
+}
+class Content
+{
+    public string content { get; set; }
+    void Show()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow; // устанавливаем цвет
+        Console.WriteLine("...");
+        Console.ResetColor();
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        //  Book book1 = new Book();
+        // Book1.
+    }
+}
 
     }
 }
