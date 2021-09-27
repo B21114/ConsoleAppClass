@@ -92,7 +92,7 @@ namespace ConsoleAppClass1Zad3
     {
         static void Main(string[] args)
         {
-            Book book = new Book()
+            Book book = new Book();
 
             book.title.title = "Война";
             book.author.author = "Леха";
