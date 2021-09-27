@@ -16,6 +16,7 @@ namespace ConsoleAppClass
         static void Main(string[] args)
         {
             Adress adress1 = new Adress();
+
             adress1.Index = 123456;
             adress1.Country = "Россия";
             adress1.City = "Москва";
