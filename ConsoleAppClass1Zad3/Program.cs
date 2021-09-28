@@ -10,29 +10,50 @@ using System;
 namespace ConsoleAppClass1Zad3
 {
 
-
+    /// <summary>
+    /// Класс книга
+    /// </summary>
     public class Book
     {
         public Title title;
         public Author author;
         public Content content;
+        /// <summary>
+        /// Метод книга
+        /// </summary>
+        /// <param name="title">Название</param>
+        /// <param name="author">Автор</param>
+        /// <param name="content">Описание</param>
         public Book(string title, string author, string content)
         {
             this.title = new Title(title);
             this.author = new Author(author);
             this.content = new Content(content);
-           
         }
+        /// <summary>
+        /// Метод для пустых полей книги
+        /// </summary>
         public Book()
         {
             this.title = new Title();
             this.author = new Author();
             this.content = new Content();
         }
-
+        /// <summary>
+        /// Метод вывода информации о книге
+        /// </summary>
+        public void Info()
+        {
+            title.Show();
+            author.Show();
+            content.Show();
+        }
 
 
     }
+    /// <summary>
+    /// Класс названия книги
+    /// </summary>
     public class Title
     {
         public string title { get; set; }
@@ -40,10 +61,17 @@ namespace ConsoleAppClass1Zad3
         {
 
         }
+        /// <summary>
+        /// Метод присвоения названия названию???
+        /// </summary>
+        /// <param name="title">название</param>
         public Title(string title)
         {
             this.title = title;
         }
+        /// <summary>
+        /// Метод установки цвета и вывода названия книги
+        /// </summary>
         public void Show()
         {
             Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
@@ -51,6 +79,9 @@ namespace ConsoleAppClass1Zad3
             Console.ResetColor();
         }
     }
+   /// <summary>
+   /// Класс автора книги
+   /// </summary>
     public class Author
     {
         public string author { get; set; }
@@ -70,7 +101,7 @@ namespace ConsoleAppClass1Zad3
         }
 
     }
-   public class Content
+    public class Content
     {
         public string content { get; set; }
         public Content()
@@ -81,7 +112,7 @@ namespace ConsoleAppClass1Zad3
         {
             this.content = content;
         }
-       public void Show()
+        public void Show()
         {
             Console.ForegroundColor = ConsoleColor.Yellow; // устанавливаем цвет
             Console.WriteLine($"Описание: {content}");
@@ -92,16 +123,11 @@ namespace ConsoleAppClass1Zad3
     {
         static void Main(string[] args)
         {
-            Book book = new Book();
-
-            book.title.title = "Война";
-            book.author.author = "Леха";
-            book.content.content = "Про войну";
-            book.title.Show();
-            book.author.Show();
-            book.content.Show();
-
           
+            Book book = new Book("Война", "Леха", "Про войну");
+            book.Info();
+ 
+            
             Book book1 = new Book();
             Console.WriteLine("Введите автора");
             book1.author.author = Console.ReadLine();
@@ -110,9 +136,7 @@ namespace ConsoleAppClass1Zad3
             Console.WriteLine("Введите название");
             book1.title.title = Console.ReadLine();
 
-            book1.title.Show();
-            book1.author.Show();
-            book1.content.Show();
+            book1.Info();
 
         }
     }
