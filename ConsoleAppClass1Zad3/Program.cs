@@ -10,11 +10,13 @@ using System;
 namespace ConsoleAppClass1Zad3
 {
 
+
     /// <summary>
     /// Класс книга
     /// </summary>
     public class Book
     {
+        
         public Title title;
         public Author author;
         public Content content;
