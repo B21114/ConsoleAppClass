@@ -25,7 +25,7 @@ namespace ConsoleAppClass1Zad4
 
         double lengthside;
         /// <summary>
-        /// Метод Point
+        /// Конструктор Point
         /// </summary>
         /// <param name="point1">Точка 1</param>
         /// <param name="point2">Точка 2</param>
@@ -67,7 +67,7 @@ namespace ConsoleAppClass1Zad4
         public int Point4 { get; set; }
         public int Point5 { get; set; }
         /// <summary>
-        /// Метод фигуры
+        /// Конструктор фигуры
         /// </summary>
         /// <param name="point1">Точка 1</param>
         /// <param name="point2">Точка 2</param>
@@ -79,7 +79,7 @@ namespace ConsoleAppClass1Zad4
             this.Point3 = point3;
         }
         /// <summary>
-        /// Метод фигуры
+        /// Конструктор фигуры
         /// </summary>
         /// <param name="point1">Точка 1</param>
         /// <param name="point2">Точка 2</param>
@@ -93,7 +93,7 @@ namespace ConsoleAppClass1Zad4
             this.Point4 = point4;
         }
         /// <summary>
-        /// Метод фигуры
+        /// Конструктор фигуры
         /// </summary>
         /// <param name="point1">Точка 1</param>
         /// <param name="point2">Точка 2</param>
