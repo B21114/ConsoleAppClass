@@ -15,13 +15,13 @@ namespace ConsoleAppClass2Zad4
     public class Invoice
     {
         
-        readonly int account;
-        readonly string customer;
-        readonly string provider;
-        string article;
-        int quantity;
-        double notnds => this.Calculator();
-        double nds => this.CalculatorNDS();
+        readonly int _account;
+        readonly string _customer;
+        readonly string _provider;
+        string _article;
+        int _quantity;
+        double _notnds => Calculator();
+        double _nds => CalculatorNDS();
         /// <summary>
         /// Конструктор Invoice
         /// </summary>
@@ -32,11 +32,11 @@ namespace ConsoleAppClass2Zad4
         /// <param name="quantity">Количество товара</param>
         public Invoice(int account, string customer, string provider, string article, int quantity)
         {
-            this.account = account;
-            this.customer = customer;
-            this.provider = provider;
-            this.article = article;
-            this.quantity = quantity;
+            _account = account;
+            _customer = customer;
+            _provider = provider;
+            _article = article;
+            _quantity = quantity;
         }
         /// <summary>
         /// /Метод расчета цены без ндс
@@ -44,39 +44,33 @@ namespace ConsoleAppClass2Zad4
         /// <returns>Возвращает цену без ндс</returns>
         double Calculator()
         {
-            double price;
-            if (article == "Samogon")
+            if (_article == "Samogon")
             {
-                price = 150;
+                return 150 * _quantity;
             }
-            else if (article == "Beer")
+            else if (_article == "Beer")
             {
-                price = 50;
+                return 50 * _quantity;
             }
             else
-                price = 0;
-
-            double notnds = price * quantity;
-            return notnds;
+                return 0;
+     
         }
         /// <summary>
         /// Метод расчета цены с ндс
         /// </summary>
         /// <returns>Возвращает цену с ндс</returns>
-        double CalculatorNDS()
-        {
-            double nds = notnds * 1.2;
-            return nds;
-        }
+        double CalculatorNDS()=> _notnds * 1.2;
+        
         /// <summary>
         /// Метод вывода информации
         /// </summary>
         public void Info()
         {
-            if (nds == 0)
+            if (_nds == 0)
             { Console.WriteLine("Такого продукта нет"); }
             else
-            Console.WriteLine($"Id:{account}, Покупатель: {customer}, Провайдер: {provider}, Наименование: {article}, Количество: {quantity}, Цена с ндс: {nds}, Цена: {notnds}");
+            Console.WriteLine($"Id:{_account}, Покупатель: {_customer}, Провайдер: {_provider}, Наименование: {_article}, Количество: {_quantity}, Цена с ндс: {_nds}, Цена: {_notnds}");
         }
     }
 }

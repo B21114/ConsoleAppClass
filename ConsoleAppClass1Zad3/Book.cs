@@ -18,7 +18,7 @@ namespace ConsoleAppClass1Zad3
         public Author author;
         public Content content;
         /// <summary>
-        /// Метод книга
+        /// Конструктор книги
         /// </summary>
         /// <param name="title">Название</param>
         /// <param name="author">Автор</param>
@@ -30,7 +30,7 @@ namespace ConsoleAppClass1Zad3
             this.content = new Content(content);
         }
         /// <summary>
-        /// Метод для пустых полей книги
+        /// Конструктор для пустых полей книги
         /// </summary>
         public Book()
         {

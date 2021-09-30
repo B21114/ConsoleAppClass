@@ -8,30 +8,6 @@ using System;
 
 namespace ConsoleAppClass2Zad2
 {
-    public class Converter
-    {
-        public double usd { get; set; }
-        public double eur { get; set; }
-        public double rub { get; set; }
-        public double uah { get; set; }
-
-        public Converter(double uah)
-        {
-            this.uah = uah;
-        }
-        public Converter(double usd, double eur, double rub)
-        {
-            this.usd = usd;
-            this.eur = eur;
-            this.rub = rub;  
-        }
-
-        public void Info()
-        {
-            Console.WriteLine($"Ваши гривны: {uah} = EUR:{eur}, USD:{usd}, RUB:{rub}");
-        }
-
-    }
     class Program
     {
         static void Main(string[] args)
@@ -40,41 +16,39 @@ namespace ConsoleAppClass2Zad2
             Console.WriteLine("Выберите действие: конвертация гривны в евро:1 в доллар:2 в рубли 3");
             Console.WriteLine("Выберите действие: конвертация из евро:4 из доллара:5 из рубля 6");
             int id = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите количество гривен");
+            Console.WriteLine("Введите количество денег:");
             Converter converter = new Converter(0.038, 0.032, 2.73);
             Converter converter1 = new Converter(Convert.ToDouble(Console.ReadLine()));
             switch (id)
             {
                 case 1:
-                    converter1.eur = converter.eur * converter1.uah;
+                    converter1.Eur = converter.Eur * converter1.Uah;
                     converter1.Info();
                     break;
                 case 2:
-                    converter1.usd = converter.usd * converter1.uah;
+                    converter1.Usd = converter.Usd * converter1.Uah;
                     converter1.Info();
                     break;
                 case 3:
-                    converter1.rub = converter.rub * converter1.uah;
+                    converter1.Rub = converter.Rub * converter1.Uah;
                     converter1.Info();
                     break;
                 case 4:
-                    converter.eur = converter1.uah / converter.eur;
+                    converter.Eur = converter1.Uah / converter.Eur;
                     converter1.Info();
                     break;
                 case 5:
-                    converter.usd = converter1.uah / converter.usd;
+                    converter.Usd = converter1.Uah / converter.Usd;
                     converter1.Info();
                     break;
                 case 6:
-                    converter.rub = converter1.uah / converter.rub;
+                    converter.Rub = converter1.Uah / converter.Rub;
                     converter1.Info();
                     break;
                 default:
                     Console.WriteLine("Повторите ввод");
                     break;
             }
-         
-           
         }
     }
 }
