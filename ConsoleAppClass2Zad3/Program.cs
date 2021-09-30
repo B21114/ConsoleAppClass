@@ -20,8 +20,8 @@ namespace ConsoleAppClass2Zad3
         private double oklad;
         private readonly double nalog = 0.13;
         private string Dolg;
-        private double resultNalog;
-        private double ras4et;
+        private double resultNalog => this.Nalog();
+        private double ras4et=> this.Result();
 
         public Employee(string fname, string name, int stag, int dolg, double oklad)
         {
@@ -65,13 +65,13 @@ namespace ConsoleAppClass2Zad3
             {
                 stagr = 1;
             }
-                ras4et = stagr * dolg * oklad ;
+              double  ras4et = stagr * dolg * oklad ;
             
                return ras4et;
            }
         public double Nalog()
         {
-            resultNalog = ras4et * nalog;
+           double  resultNalog = ras4et * nalog;
             return resultNalog;
         }
     }
@@ -82,12 +82,6 @@ namespace ConsoleAppClass2Zad3
             Employee employee1 = new Employee("Бочкарев", "Алексей", 10, 1, 1000);
             Employee employee2 = new Employee("Кирпичев", "Кирпич", 1, 2, 100);
             Employee employee3 = new Employee("Володина", "Кира", 13, 3, 10000);
-            employee1.Result();
-            employee2.Result();
-            employee3.Result();
-            employee1.Nalog();
-            employee2.Nalog();
-            employee3.Nalog();
             employee1.Info();
             employee2.Info();
             employee3.Info();
