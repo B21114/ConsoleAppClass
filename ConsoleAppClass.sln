@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppClass1Zad4", "Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppClass2Zad0", "ConsoleAppClass2Zad0\ConsoleAppClass2Zad0.csproj", "{7EF2C5E2-A272-43E1-B393-4E42C98F9747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppClass2Zad2", "ConsoleAppClass2Zad2\ConsoleAppClass2Zad2.csproj", "{3E069172-C0CF-49C2-B5E5-128B1915F19A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppClass2Zad2", "ConsoleAppClass2Zad2\ConsoleAppClass2Zad2.csproj", "{3E069172-C0CF-49C2-B5E5-128B1915F19A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppClass2Zad3", "ConsoleAppClass2Zad3\ConsoleAppClass2Zad3.csproj", "{78B9CA7C-B5F1-467C-86B8-5EC4A02C88DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3E069172-C0CF-49C2-B5E5-128B1915F19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E069172-C0CF-49C2-B5E5-128B1915F19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E069172-C0CF-49C2-B5E5-128B1915F19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B9CA7C-B5F1-467C-86B8-5EC4A02C88DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B9CA7C-B5F1-467C-86B8-5EC4A02C88DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B9CA7C-B5F1-467C-86B8-5EC4A02C88DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B9CA7C-B5F1-467C-86B8-5EC4A02C88DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
