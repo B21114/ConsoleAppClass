@@ -5,76 +5,11 @@
 сбор.
 Написать программу, которая выводит на экран информацию о сотруднике (фамилия, имя, должность),
 оклад и налоговый сбор. */
-using System;
 
 namespace ConsoleAppClass2Zad3
 {
-    class Employee
-    {
-        private string fname;
-        private string name;
-        private int stag;
-        private double stagr;
-        private int dolg;
-        private double dolg1;
-        private double oklad;
-        private readonly double nalog = 0.13;
-        private string Dolg;
-        private double resultNalog => this.Nalog();
-        private double ras4et=> this.Result();
 
-        public Employee(string fname, string name, int stag, int dolg, double oklad)
-        {
-            this.fname = fname;
-            this.name = name;
-            this.stag = stag;
-            this.dolg = dolg;
-            this.oklad = oklad;
-        }
-        public void Info()
-        {
-            if (dolg == 1)
-            {
-                Dolg = "Директор";
-                dolg1 = 100;
-            }
-            else if (dolg == 2)
-            {
-                Dolg = "Кирпич";
-                dolg1 = 1;
-            }
-            else if (dolg == 3)
-            {
-                Dolg = "Менеджер";
-                dolg1 = 100;
-            }
 
-            Console.WriteLine($"Фамилия:{fname}, Имя:{name}, Стаж:{stag}, Должность:{Dolg}, Оклад:{oklad},Межрасчет:{ras4et} Налог:{resultNalog}");
-        }
-          public double Result()
-         {
-            if (stag > 10)
-            {
-                stagr = 1.5;
-            }
-            else if (stag < 10 && stag > 5)
-            {
-                stagr = 1.3;
-            }
-            else
-            {
-                stagr = 1;
-            }
-              double  ras4et = stagr * dolg * oklad ;
-            
-               return ras4et;
-           }
-        public double Nalog()
-        {
-           double  resultNalog = ras4et * nalog;
-            return resultNalog;
-        }
-    }
     class Program
     {
         static void Main(string[] args)
@@ -89,3 +24,5 @@ namespace ConsoleAppClass2Zad3
         }
     }
 }
+
+

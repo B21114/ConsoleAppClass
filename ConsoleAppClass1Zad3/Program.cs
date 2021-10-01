@@ -9,118 +9,6 @@ using System;
 
 namespace ConsoleAppClass1Zad3
 {
-
-
-    /// <summary>
-    /// Класс книга
-    /// </summary>
-    public class Book
-    {
-        
-        public Title title;
-        public Author author;
-        public Content content;
-        /// <summary>
-        /// Метод книга
-        /// </summary>
-        /// <param name="title">Название</param>
-        /// <param name="author">Автор</param>
-        /// <param name="content">Описание</param>
-        public Book(string title, string author, string content)
-        {
-            this.title = new Title(title);
-            this.author = new Author(author);
-            this.content = new Content(content);
-        }
-        /// <summary>
-        /// Метод для пустых полей книги
-        /// </summary>
-        public Book()
-        {
-            this.title = new Title();
-            this.author = new Author();
-            this.content = new Content();
-        }
-        /// <summary>
-        /// Метод вывода информации о книге
-        /// </summary>
-        public void Info()
-        {
-            title.Show();
-            author.Show();
-            content.Show();
-        }
-
-
-    }
-    /// <summary>
-    /// Класс названия книги
-    /// </summary>
-    public class Title
-    {
-        public string title { get; set; }
-        public Title()
-        {
-
-        }
-        /// <summary>
-        /// Метод присвоения названия названию???
-        /// </summary>
-        /// <param name="title">название</param>
-        public Title(string title)
-        {
-            this.title = title;
-        }
-        /// <summary>
-        /// Метод установки цвета и вывода названия книги
-        /// </summary>
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
-            Console.WriteLine($"Название: {title}");
-            Console.ResetColor();
-        }
-    }
-   /// <summary>
-   /// Класс автора книги
-   /// </summary>
-    public class Author
-    {
-        public string author { get; set; }
-        public Author()
-        {
-
-        }
-        public Author(string author)
-        {
-            this.author = author;
-        }
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Red; // устанавливаем цвет
-            Console.WriteLine($"Автор: {author}");
-            Console.ResetColor();
-        }
-
-    }
-    public class Content
-    {
-        public string content { get; set; }
-        public Content()
-        {
-
-        }
-        public Content(string content)
-        {
-            this.content = content;
-        }
-        public void Show()
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow; // устанавливаем цвет
-            Console.WriteLine($"Описание: {content}");
-            Console.ResetColor();
-        }
-    }
     class Program
     {
         static void Main(string[] args)
@@ -132,11 +20,11 @@ namespace ConsoleAppClass1Zad3
             
             Book book1 = new Book();
             Console.WriteLine("Введите автора");
-            book1.author.author = Console.ReadLine();
+            book1.author.Author1 = Console.ReadLine();
             Console.WriteLine("Введите описание");
-            book1.content.content = Console.ReadLine();
+            book1.content.Content1 = Console.ReadLine();
             Console.WriteLine("Введите название");
-            book1.title.title = Console.ReadLine();
+            book1.title.Title1 = Console.ReadLine();
 
             book1.Info();
 
