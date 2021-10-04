@@ -6,21 +6,24 @@
 соответствующего метода их экземпляра, строки, переданные в качестве аргументов методов,
 выводились разными цветами.
 Обязательно используйте приведение типов. */
+using System;
 
 namespace ConsoleApp3Zad0
 {
-
-
-    class Program
+    /// <summary>
+    /// Класс красный, наследник принтера
+    /// </summary>
+    public class Red : Printer
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Метод перекраски в красный
+        /// </summary>
+        /// <param name="value">Строка</param>
+        public override void Print(string value)
         {
-            Printer printer = new Printer();
-            printer.Print("Строка1");
-            Red red = new Red();
-            red.Print("Строка2");
-            Green green = new Green();
-            green.Print("Строка3");
+            Console.ForegroundColor = ConsoleColor.Red; // устанавливаем цвет
+            Console.WriteLine($"{value}");
+            Console.ResetColor(); // сбрасываем в стандартный
         }
     }
 }

@@ -6,21 +6,22 @@
 соответствующего метода их экземпляра, строки, переданные в качестве аргументов методов,
 выводились разными цветами.
 Обязательно используйте приведение типов. */
+using System;
 
 namespace ConsoleApp3Zad0
 {
-
-
-    class Program
+    /// <summary>
+    /// Класс принтер 
+    /// </summary>
+    public class Printer
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Метод вывода информации обычным цветом
+        /// </summary>
+        /// <param name="value">Строка</param>
+        public virtual void Print(string value)
         {
-            Printer printer = new Printer();
-            printer.Print("Строка1");
-            Red red = new Red();
-            red.Print("Строка2");
-            Green green = new Green();
-            green.Print("Строка3");
+            Console.WriteLine(value);
         }
     }
 }
