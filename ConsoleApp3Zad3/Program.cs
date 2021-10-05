@@ -8,50 +8,19 @@
 Написать программу, которая выводит на экран информацию о каждом средстве передвижения. 
  */
 
-using System;
-
 namespace ConsoleApp3Zad3
 
 {
-
-    class Vehicle
-    {
-        double X { get; set; }
-        double Y { get; set; }
-        double Price { get; set; }
-        double Speed { get; set; }
-        double Year { get; set; }
-      
-    }   
-    class Plane : Vehicle
-    {
-        double Height { get; set; }
-        int Passenger { get; set; }
-     
-    }
-    
-    class Ship : Vehicle
-    {
-        string Port { get; set; }
-        int Passenger { get; set; }
-
-        public void Move()
-        {
-            Console.WriteLine("");
-        }
-    }
-    class Car : Vehicle
-    {
-        public void Move()
-        {
-            Console.WriteLine("Машина едет");
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Car car = new Car(10,10,200000,200,1994);
+            Ship ship = new Ship(1, 2, 54353454, 50, 1923, "Белозубка", 320);
+            Plane plane = new Plane(4,4,12312312321321,1000,2014,10000,50);
+            car.Info();
+            ship.Info();
+            plane.Info();
         }
     }
 }
