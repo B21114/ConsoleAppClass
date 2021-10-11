@@ -11,7 +11,7 @@ namespace ConsoleApp3zad2_v2
         /// <summary>
         /// Массив для хранения учеников
         /// </summary>
-        Pupil[] arrPupil;
+        Pupil[] _arrPupil;
 
         /// <summary>
         /// Конструктор для комнаты, с массивом людей
@@ -19,7 +19,7 @@ namespace ConsoleApp3zad2_v2
         /// <param name="arrPupil">Массив людей</param>
         public ClassRoom(Pupil[] arrPupil)
         {
-            this.arrPupil = arrPupil;
+            this._arrPupil = arrPupil;
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace ConsoleApp3zad2_v2
         public void PrintInfoStudy()
         {
             Console.WriteLine("Учатся: ");
-            foreach (Pupil item in arrPupil)
+            foreach (Pupil item in _arrPupil)
                 item.Study();
         }
 
@@ -38,7 +38,7 @@ namespace ConsoleApp3zad2_v2
         public void PrintInfoRead()
         {
             Console.WriteLine("Читают: ");
-            foreach (Pupil item in arrPupil)
+            foreach (Pupil item in _arrPupil)
                 item.Read();
         }
 
@@ -48,7 +48,7 @@ namespace ConsoleApp3zad2_v2
         public void PrintInfoWrite()
         {
             Console.WriteLine("Записывают: ");
-            foreach (Pupil item in arrPupil)
+            foreach (Pupil item in _arrPupil)
                 item.Write();
         }
 
@@ -58,7 +58,7 @@ namespace ConsoleApp3zad2_v2
         public void PrintInfoRelax()
         {
             Console.WriteLine("Отдыхают: ");
-            foreach (Pupil item in arrPupil)
+            foreach (Pupil item in _arrPupil)
                 item.Relax();
         }
     }

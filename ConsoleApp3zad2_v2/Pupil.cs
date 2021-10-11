@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3zad2_v2
 {
-    public class Pupil
+    public abstract class Pupil
     {
         /// <summary>
         /// Метод учатся, переопределится

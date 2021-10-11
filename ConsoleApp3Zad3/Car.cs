@@ -34,9 +34,9 @@ namespace ConsoleApp3Zad3
         /// <summary>
         /// Переопределенный метод вывода информации о машине
         /// </summary>
-        public override void Info()
+        public override string ToString()
         {
-            Console.WriteLine($"Координата х:{X}, Координата y:{Y}, Цена:{Price}, Скорость:{Speed}, Год выпуска:{Year}");
+            return $"Координата х:{X}, Координата y:{Y}, Цена:{Price}, Скорость:{Speed}, Год выпуска:{Year}";
         }
     }
 }

@@ -64,10 +64,10 @@ namespace ConsoleApp3Zad3
         /// <summary>
         /// Метод вывода информации, который переопределится
         /// </summary>
-        public virtual void Info()
+      
+        public override string ToString()
         {
-            Console.WriteLine($"{X}, {Y}, {Price}, {Speed}, {Year}");
+            return $"Координата х:{X}, Координата y:{Y}, Цена:{Price}, Скорость:{Speed}, Год выпуска:{Year}";
         }
-
-    }   
+    }
 }

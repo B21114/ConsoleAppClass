@@ -22,7 +22,7 @@ namespace ConsoleApp3Zad0
         public override void Print(string value)
         {
             Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
-            Console.WriteLine($"{value}");
+            Console.WriteLine(value);
             Console.ResetColor(); // сбрасываем в стандартный
         }
     }

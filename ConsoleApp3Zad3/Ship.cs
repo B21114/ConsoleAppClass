@@ -48,9 +48,9 @@ namespace ConsoleApp3Zad3
         /// <summary>
         /// Переопределенный метод вывода информации о корабле
         /// </summary>
-        public override void Info()
+        public override string ToString()
         {
-            Console.WriteLine($"Координата х:{X}, Координата y:{Y}, Цена:{Price}, Скорость:{Speed}, Год выпуска:{Year}, Порт: {Port}, Количество пассажиров:{Passenger}");
+            return $"Координата х:{X}, Координата y:{Y}, Цена:{Price}, Скорость:{Speed}, Год выпуска:{Year}, Порт:{Port}, Пассажиры{Passenger}";
         }
     }
 }
