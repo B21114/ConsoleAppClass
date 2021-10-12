@@ -17,16 +17,17 @@ namespace ConsoleAppClass2Zad3
         private string _fname;
         private string _name;
         private int _stag;
-        private double _stagr;
         private int _dolg;
         private double _dolg1;
         private double _oklad;
         private readonly double _nalog = 0.13;
         private string _dolg2;
+        
         /// <summary>
         /// Присвоение переменной результата расчета налога
         /// </summary>
         private double _resultNalog => ResultNalog();
+     
         /// <summary>
         /// Присвоение переменной результата расчета межрасчета
         /// </summary>
@@ -48,6 +49,7 @@ namespace ConsoleAppClass2Zad3
             _dolg = dolg;
             _oklad = oklad;
         }
+        
         /// <summary>
         /// Метод вывода информации
         /// </summary>
@@ -58,20 +60,19 @@ namespace ConsoleAppClass2Zad3
                 _dolg2 = "Директор";
                 _dolg1 = 100;
             }
-            else if (_dolg == 2)
+            if (_dolg == 2)
             {
                 _dolg2 = "Кирпич";
                 _dolg1 = 1;
             }
-            else if (_dolg == 3)
+            if (_dolg == 3)
             {
                 _dolg2 = "Менеджер";
                 _dolg1 = 100;
             }
-
-
             Console.WriteLine($"Фамилия:{_fname}, Имя:{_name}, Стаж:{_stag}, Должность:{_dolg2}, Оклад:{_oklad},Межрасчет:{_ras4et} Налог:{_resultNalog}");
         }
+
         /// <summary>
         /// Метод расчета налога
         /// </summary>
@@ -88,11 +89,11 @@ namespace ConsoleAppClass2Zad3
             {
                 return 1.5 * _dolg * _oklad;
             }
-            else if (_stag < 10 && _stag > 5)
+            if (_stag < 10 && _stag > 5)
             {
                 return 1.3 * _dolg * _oklad;
             }
-            else if (_stag < 5)
+            if (_stag < 5)
             {
                 return 1 * _dolg * _oklad;
             }

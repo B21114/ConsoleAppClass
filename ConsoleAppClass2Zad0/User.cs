@@ -12,22 +12,27 @@ namespace ConsoleAppClass2Zad0
         /// Логин
         /// </summary>
         public string Login { get; set; }
+       
         /// <summary>
         /// Имя
         /// </summary>
         public string Name { get; set; }
-       /// <summary>
+       
+        /// <summary>
        /// Фамилия
        /// </summary>
         public string Fname { get; set; }
+        
         /// <summary>
         /// Возраст
         /// </summary>
         public int Age { get; set; }
+       
         /// <summary>
         /// Дата
         /// </summary>
         public DateTime Date { get; }
+        
         /// <summary>
         ///  Метод Пользователя
         /// </summary>
@@ -44,6 +49,7 @@ namespace ConsoleAppClass2Zad0
             Age = age;
             Date = date; 
         }
+        
         /// <summary>
         /// метод вывода информации
         /// </summary>
