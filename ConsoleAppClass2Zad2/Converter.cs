@@ -13,18 +13,22 @@ namespace ConsoleAppClass2Zad2
     /// </summary>
     public class Converter
     {
+       
         /// <summary>
         /// Доллар
         /// </summary>
         public double Usd { get; set; }
+        
         /// <summary>
         /// Евро
         /// </summary>
         public double Eur { get; set; }
+        
         /// <summary>
         /// Рубли
         /// </summary>
         public double Rub { get; set; }
+       
         /// <summary>
         /// Гривны
         /// </summary>
@@ -38,6 +42,7 @@ namespace ConsoleAppClass2Zad2
         {
             Uah = uah;
         }
+        
         /// <summary>
         /// Конструтор с евро, долларом и рублем
         /// </summary>
@@ -50,6 +55,7 @@ namespace ConsoleAppClass2Zad2
             Eur = eur;
             Rub = rub;  
         }
+        
         /// <summary>
         /// Метод вывода информации
         /// </summary>
